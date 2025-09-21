@@ -28,19 +28,6 @@ export function addDropdown(container:HTMLElement | null, dropdownName: string):
         activeDropdowns.push(dropdown);
 
         updateDropdown();
-
-        dropdown.bind('change', (selected: string)=>{
-            console.log('Select:', selected);
-        });
-        dropdown.bind('open', ()=>{
-            console.log('Дропдаун открылся');
-        });
-        dropdown.bind('close', ()=>{
-            console.log('Дропдаун закрылся');
-        });
-        const selected = dropdown.getSelectedValue();
-
-        if(selected) console.log("CurrentChoice:", selected);
     }
 }
 
@@ -63,7 +50,7 @@ function warning(componet:HTMLElement): void{
         contactForm.style.gridTemplateRows = 'repeat(auto-fill, 42px)';
         
         if(componet.closest('div')?.querySelector('.warning') === null){
-                componet.insertAdjacentElement('afterend' , warning);
+            componet.insertAdjacentElement('afterend' , warning);
         }
     } 
 }
@@ -242,7 +229,7 @@ function confirmContactDelete(groupName: string, contactNumber: string): void{
 function editContact(editBtn: HTMLElement): void{
     let index = editBtn.closest('.container__group')?.id.indexOf('-');
     const groupName = editBtn.closest('.container__group')?.id.substring(0, index);
-    console.log(groupName);
+
     const contactName = (editBtn.closest('.contact-item')?.querySelector('.contact-item__name') as HTMLInputElement).value;
     const number = (editBtn.closest('.contact-item__info')?.querySelector('.contact-info__number') as HTMLInputElement)?.value;
    
