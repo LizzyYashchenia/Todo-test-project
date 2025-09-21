@@ -66,8 +66,10 @@ function deleteGroup(e: Event): void{
 function confirmDelete(): void{
     const groupName = modalConfirmBtn?.getAttribute('data-id');
     if(groupName){
-        const deleteGroup = document.getElementById(groupName);
-        deleteGroup?.remove();
+        const deleteGroupFromSidebar = document.getElementById(groupName);
+        const deleteGroupFromPage = document.getElementById(`${groupName}-group`);
+        deleteGroupFromSidebar?.remove();
+        deleteGroupFromPage?.remove();
         localStorage.removeItem(groupName);
         updateDropdown();
         addInfoText();
