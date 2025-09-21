@@ -2,13 +2,8 @@ const headerBtnContainer = document.getElementById("header-btn");
 const mainBtnContainer = document.getElementById("contactList");
 const addContactBtn = document.getElementById("show-add-contact-btn");
 
-export function resizeWindow(): void{
-    const innerWidth = document.documentElement.clientWidth;
-}
-
 function swapButton(): void{
 
-    resizeWindow();
     if(!addContactBtn) return;
     
     if(headerBtnContainer && addContactBtn && innerWidth > 480){

@@ -1,4 +1,3 @@
-import { resizeWindow } from "./layout";
 import { addDropdown } from "./manage-contact";
 
 const overlay = document.getElementById('overlay');
@@ -129,8 +128,6 @@ export function checkGroupList(formId: string): void{
 }
 
 export function initSidebar(): void{
-    window.addEventListener('resize', resizeWindow);
-    resizeWindow();
     overlay?.addEventListener('click', function(){
         closeSidebar(groupList);
         closeSidebar(contactList);
