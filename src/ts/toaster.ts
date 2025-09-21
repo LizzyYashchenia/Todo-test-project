@@ -1,3 +1,5 @@
+import { getAbsoluteUrl } from "./main";
+
 export class Toaster {
     private static queue: string[] = [];
     private static isShowing = false;
@@ -37,7 +39,7 @@ export class Toaster {
 
         const image = document.createElement('img');
         image.classList.add('toaster__image');
-        image.src = '/images/success.png';
+        image.src = `${getAbsoluteUrl('images/success.png')}`;
         image.alt = 'Success';
 
         const textElement = document.createElement('span');

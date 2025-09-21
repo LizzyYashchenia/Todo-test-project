@@ -1,0 +1,15 @@
+{
+  "hash": "f6726ab9",
+  "configHash": "054b9999",
+  "lockfileHash": "5ccc50e2",
+  "browserHash": "d221126a",
+  "optimized": {
+    "imask": {
+      "src": "../../node_modules/imask/esm/index.js",
+      "file": "imask.js",
+      "fileHash": "b547e6dd",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}

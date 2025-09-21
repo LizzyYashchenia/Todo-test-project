@@ -1,5 +1,6 @@
 import { getStorageList } from "./local-storage";
 import { buttonHandlerLoad } from "./main";
+import { getAbsoluteUrl } from "./main";
 
 interface ContactItem {
     groupName: string | null;
@@ -40,7 +41,7 @@ function loadGroup(groupName: string, contactName: string,  number:string): void
                 <div id="${groupName}-group" class="container__group group">
                     <button class="group__open-btn open-btn" state="false">
                         <span class="open-btn__text">${groupName}</span>
-                        <img class="open-btn__image" src="/images/dropdown.png" alt="open group button">
+                        <img class="open-btn__image" src="${getAbsoluteUrl('images/dropdown.png')}" alt="open group button">
                     </button>
                     <div class="group__contact">
                     </div>
