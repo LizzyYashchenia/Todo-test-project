@@ -1,3 +1,5 @@
+import { getAbsoluteUrl } from "./main";
+
 export class Dropdown{
     private container: HTMLElement;
     private dropdownName: string;
@@ -23,7 +25,7 @@ export class Dropdown{
             <div id = "${this.dropdownName}" class="contact-list__element dropdown-container">
                 <button class="dropdown__button" type="button">
                     <span class="dropdown__selected-text">Выберите группу</span>
-                    <img src="/images/dropdown.png" alt="dropdown button" class="dropdown__arrow"/>
+                    <img src="${getAbsoluteUrl('images/dropdown.png')}" alt="dropdown button" class="dropdown__arrow"/>
                 </button>
                 <div class="dropdown__menu menu" style="visibility: hidden;">
                     <div class="menu__list list"></div>

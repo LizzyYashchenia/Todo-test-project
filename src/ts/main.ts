@@ -59,7 +59,11 @@ function closeAllMenu(): void{
         closeMenu(currentButton, dropdown);
     });
 }
-
+export const getAbsoluteUrl = (path: string): string => {
+    const baseUrl = import.meta.env.BASE_URL;
+    
+    return `${baseUrl.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+};
 
 document.addEventListener("DOMContentLoaded", () =>{
     initLayout();
