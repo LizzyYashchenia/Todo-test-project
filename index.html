@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/imask"></script>
-    <link rel="stylesheet" href="/src/scss/styles.scss">
+    <script src="https://unpkg.com/imask"></script>
     <title>Contact Book</title>
+    <script type="module" crossorigin src="/Todo-test-project/assets/index-Cea4mWXa.js"></script>
+    <link rel="stylesheet" crossorigin href="/Todo-test-project/assets/index-BqX15foa.css">
   </head>
   <body>
     <div id="overlay" class="overlay"></div>
     <header class="header">
         <a href="#" class="header__logo logo">
-            <img class="logo__image" src="/images/contact-book.png" alt="logo-image" />
+            <img class="logo__image" src="/Todo-test-project/images/contact-book.png" alt="logo-image" />
             <span class="logo__text">Книга контактов</span>
         </a>
         <div id="header-btn" class="header__button button">
@@ -27,7 +28,7 @@
             <div class="contact-group__aside-header aside-header">
                 <span class="aside-header__title">Группы контактов</span>
                 <button id="close-groups" class="aside-header__button aside-header-button" type="button">
-                    <img src="/images/close-btn.png" class="aside-button__image" alt="aside close button">
+                    <img src="/Todo-test-project/images/close-btn.png" class="aside-button__image" alt="aside close button">
                 </button>
             </div>
             <form id="groupForm" action="" class="aside-contact-group__list group-list">
@@ -42,7 +43,7 @@
             <div class="contact-list__aside-header aside-header">
                 <span class="aside-header__title">Добавление контакта</span>
                 <button id="close-add-contact" class="aside-header__button aside-header-button" type="button">
-                    <img src="/images/close-btn.png" class="aside-button__image" alt="aside close button">
+                    <img src="/Todo-test-project/images/close-btn.png" class="aside-button__image" alt="aside close button">
                 </button>
             </div>
             <form id="contactForm" action="" class="aside-contact-list__list contact-list">
@@ -61,7 +62,7 @@
         <div class="modal__inner modal-inner">
             <div class="modal-inner__header modal-header">
                 <button id="close-modal-btn" class="modal-header__button modal-header-btn">
-                    <img class="modal-header-btn__image" src="/images/close-btn.png" alt="close modal button">
+                    <img class="modal-header-btn__image" src="/Todo-test-project/images/close-btn.png" alt="close modal button">
                 </button>
             </div>
             <p id="modal-header" class="modal-inner__title"></p>
@@ -71,8 +72,7 @@
                 <button id="modal-cancel-btn" class="modal-button_cancel cancel-btn transparent-btn">Отменить</button>
             </div>
         </div>
-    </div>
-    <script type="module" src="/src/ts/main.ts"></script>
+    </div>
     <script src="https://unpkg.com/imask"></script>
 
   </body>
