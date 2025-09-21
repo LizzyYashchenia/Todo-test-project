@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/imask"></script>
+    <title>Contact Book</title>
+  </head>
+  <body>
+    <div id="overlay" class="overlay"></div>
+    <header class="header">
+        <a href="#" class="header__logo logo">
+            <img class="logo__image" src="/images/contact-book.png" alt="logo-image" />
+            <span class="logo__text">Книга контактов</span>
+        </a>
+        <div id="header-btn" class="header__button button">
+            <button id="show-groups" class="button__groups" type="button">Группы</button>
+        </div>
+    </header>
+    <main id="contactList" class="contact">
+        <button id="show-add-contact-btn" class="contact__add-contact-btn add-contact-btn" type="button">Добавить контакт &nbsp;<b class="add-contact-btn__plus">+</b></button>
+        <section id="contactContainer" class="contact__container container"> 
+        </section>
+    </main>
+    <section id="groupList" class="contact-group aside">
+            <div class="contact-group__aside-header aside-header">
+                <span class="aside-header__title">Группы контактов</span>
+                <button id="close-groups" class="aside-header__button aside-header-button" type="button">
+                    <img src="./images/close-btn.png" class="aside-button__image" alt="aside close button">
+                </button>
+            </div>
+            <form id="groupForm" action="" class="aside-contact-group__list group-list">
+                
+            </form>
+            <div class="aside-contact-group__aside-button aside-button">
+                <button id="add-group-btn" class="aside-button__add transparent-btn" type="button">Добавить</button>
+                <button id="save-group-btn" type="button" class="aside-button__save blue-btn" form="contactForm">Сохранить</button>
+            </div>
+    </section>
+    <section id="addContactList" class="contact-list aside">
+            <div class="contact-list__aside-header aside-header">
+                <span class="aside-header__title">Добавление контакта</span>
+                <button id="close-add-contact" class="aside-header__button aside-header-button" type="button">
+                    <img src="./images/close-btn.png" class="aside-button__image" alt="aside close button">
+                </button>
+            </div>
+            <form id="contactForm" action="" class="aside-contact-list__list contact-list">
+                <div class="contact-list__item item">
+                    <input id="text" type="text"  name="contact_name" class="contact-list__element" placeholder="Введите ФИО" maxlength="50" />
+                </div>
+                <div class="contact-list__item item">
+                    <input id="phone" type="text" name="contact_number" class="contact-list__element" placeholder="Введите номер" quantity="" autocomplete="mobile" />
+                </div>
+            </form>
+            <div class="aside-contact-list__aside-button aside-button">
+                <button id="save-contact-btn" class="aside-button__save blue-btn" form="contactForm" type="button">Сохранить</button>
+            </div>
+    </section>
+    <div id="modal" class="modal">
+        <div class="modal__inner modal-inner">
+            <div class="modal-inner__header modal-header">
+                <button id="close-modal-btn" class="modal-header__button modal-header-btn">
+                    <img class="modal-header-btn__image" src="/images/close-btn.png" alt="close modal button">
+                </button>
+            </div>
+            <p id="modal-header" class="modal-inner__title"></p>
+            <p id="modal-text" class="modal-inner__text"></p>
+            <div class="modal-inner__button modal-button">
+                <button id="modal-confirm-btn" class="modal-button__delete delete-btn blue-btn" data-id="">Подтвердить</button>
+                <button id="modal-cancel-btn" class="modal-button_cancel cancel-btn transparent-btn">Отменить</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/ts/main.ts"></script>
+    <script src="https://unpkg.com/imask"></script>
+
+  </body>
+</html>
