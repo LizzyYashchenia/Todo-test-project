@@ -120,7 +120,6 @@ export function checkGroupList(formId: string): void{
                 infoText.classList.add('group-list__info-text');
                 infoText.textContent = 'Группы не найдены.';
                 groupForm.appendChild(infoText);
-                console.log(groupForm.childNodes);
                 groupForm.style.gridTemplateRows = 'none';
             }
         }
